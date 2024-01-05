@@ -17,6 +17,7 @@ Solutions are represented in the format [[r, c], [r, c], [r, c], [r, c]]
 where `r` and `c` represent the row and column, respectively, where a
 queen must be placed on the chessboard.
 """
+
 import sys
 
 
@@ -120,9 +121,9 @@ def recursive_solve(board, row, queens, solutions):
             tmp_board[row][c] = "Q"
             xout(tmp_board, row, c)
             solutions = recursive_solve(tmp_board, row + 1,
-                    queens + 1, solutions)
+                                        queens + 1, solutions)
 
-            return (solutions)
+    return (solutions)
 
 
 if __name__ == "__main__":
